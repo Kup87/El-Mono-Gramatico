@@ -19,6 +19,7 @@ function NavBar() {
             <Nav.Link href="#Colecciones">Colecciones</Nav.Link>
             <NavDropdown title="Redes" id="collasible-nav-dropdown">
               <NavDropdown.Item href="https://www.instagram.com/libreriaelmonogramatico/"  target="_blank">Instagram</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.facebook.com/groups/511064396402057"  target="_blank">Facebook</NavDropdown.Item>
               
             </NavDropdown>
           </Nav>
