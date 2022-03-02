@@ -1,4 +1,9 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Carrito from '/components/Carrito/Carrito';
+
 
 function NavBar() {
   return (
@@ -19,10 +24,8 @@ function NavBar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            <Nav.Link href=""><Carrito /></Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
