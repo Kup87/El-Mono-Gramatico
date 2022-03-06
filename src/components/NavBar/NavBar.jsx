@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../../Media/Logo.jpg';
-
+import SocialMediaLinks from '../ItemsDropdown/SocialMediaLinks';
 
 
 function NavBar() {
@@ -18,9 +18,8 @@ function NavBar() {
             <Nav.Link href="#Libros">Libros</Nav.Link>
             <Nav.Link href="#Colecciones">Colecciones</Nav.Link>
             <NavDropdown title="Redes" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="https://www.instagram.com/libreriaelmonogramatico/"  target="_blank">Instagram</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.facebook.com/groups/511064396402057"  target="_blank">Facebook</NavDropdown.Item>
-              
+              <SocialMediaLinks titulo="Instagram" link="https://www.instagram.com/libreriaelmonogramatico/"/>
+              <SocialMediaLinks titulo="Facebook" link="https://www.facebook.com/groups/511064396402057"/>
             </NavDropdown>
           </Nav>
           <Nav>
