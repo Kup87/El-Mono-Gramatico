@@ -1,6 +1,10 @@
-.svg1 {
+.cartSVG {
   -webkit-filter: invert(1);
           filter: invert(1);
+  height: 1.6em;
+}
+
+.countSVG {
   height: 1.6em;
 }
 
@@ -9,5 +13,24 @@
   height: 70px;
   -webkit-filter: brightness(2);
           filter: brightness(2);
+}
+
+.contador_container {
+  margin: 1em auto;
+  width: 12em;
+  border: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countSubmit {
+  margin: -.5em;
 }
 /*# sourceMappingURL=style.css.map */

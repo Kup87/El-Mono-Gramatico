@@ -2,7 +2,7 @@ import CarritoImg from './cart.svg'
 
 function Carrito() {
   return (
-    <><img src={CarritoImg} alt="CarritoImg" className='svg1'/></>
+    <><img src={CarritoImg} alt="CarritoImg" className='cartSVG'/></>
   )
 }
 

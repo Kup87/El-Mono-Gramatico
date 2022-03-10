@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "ACAA,AAAA,KAAK,CAAC;EACF,MAAM,EAAE,SAAS;EACjB,MAAM,EAAE,KAAK;CAChB;;ACHD,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,aAAa;CACxB",
+    "mappings": "ACAA,AAAA,QAAQ,CAAC;EACL,MAAM,EAAE,SAAS;EACjB,MAAM,EAAE,KAAK;CAChB;;AAED,AAAA,SAAS,CAAC;EACN,MAAM,EAAE,KAAK;CAChB;;ACPD,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,aAAa;CACxB;;ACJD,AAAA,mBAAmB,CAAC;EAChB,MAAM,EAAE,QAAQ;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,cAAc;EACtB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CACtB;;AAED,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,KAAK;CAChB",
     "sources": [
         "style.scss",
         "scss_Partials/_svg.scss",
-        "scss_Partials/_logo.scss"
+        "scss_Partials/_logo.scss",
+        "scss_Partials/_itemCount.scss"
     ],
     "names": [],
     "file": "style.css"
