@@ -1,0 +1,8 @@
+#card {
+    min-width: 18em;
+    margin: 1.2em;
+}
+
+#card + #card {
+    margin-left: 0 ;
+}
