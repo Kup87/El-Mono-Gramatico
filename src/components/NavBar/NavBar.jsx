@@ -5,26 +5,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../../Media/Logo.jpg';
 import SocialMediaLinks from '../ItemsDropdown/SocialMediaLinks';
+import { NavLink } from 'react-router-dom';
 
 
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home"><img src={Logo} alt="El Mono Gramático" className='logo1'/></Navbar.Brand>
+        <NavLink to='/'><img src={Logo} alt="El Mono Gramático" className='logo1' /></NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#Libros">Libros</Nav.Link>
-            <Nav.Link href="#Colecciones">Colecciones</Nav.Link>
+            <NavLink to='/' className={isActive => "nav-link" + (!isActive ? " unselected" : "")}>Libros</NavLink>
+            <NavLink to='/' className={isActive => "nav-link" + (!isActive ? " unselected" : "")}>Colecciones</NavLink>
             <NavDropdown title="Redes" id="collasible-nav-dropdown">
-              <SocialMediaLinks titulo="Instagram" link="https://www.instagram.com/libreriaelmonogramatico/"/>
-              <SocialMediaLinks titulo="Facebook" link="https://www.facebook.com/groups/511064396402057"/>
+              <SocialMediaLinks titulo="Instagram" link="https://www.instagram.com/libreriaelmonogramatico/" />
+              <SocialMediaLinks titulo="Facebook" link="https://www.facebook.com/groups/511064396402057" />
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href=""><CartWidget /></Nav.Link>
-            
+            <NavLink to='/cart'><CartWidget /></NavLink>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
