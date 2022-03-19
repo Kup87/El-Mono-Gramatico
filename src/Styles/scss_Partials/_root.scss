@@ -1,13 +1,13 @@
-a {
+body a {
     color: inherit;
     text-decoration: none;
     &:hover {
         color: inherit;
       text-decoration: none;
-    }
+    } 
   }
  
-  a:not([href]):not([class]) {
+body a:not([href]):not([class]) {
     &,
     &:hover {
       color: inherit;

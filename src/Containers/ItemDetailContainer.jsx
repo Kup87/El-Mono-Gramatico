@@ -9,11 +9,7 @@ function ItemDetailContainer() {
     const [loading, setLoading] = useState(true)
     const { libroid } = useParams()
     const [producto, setProducto] = useState({})
-    let navigate = useNavigate(); 
-    const goBack = () =>{ 
-    let path = "/"; 
-    navigate(path);
-  }
+    const goBack = () => window.history.go(-1)
     
     useEffect(() => {
         fxFetch
