@@ -6,8 +6,8 @@ function Item(props) {
   return (
     <>
       {prods.map((prod) =>
-        <Link to={`libros/${prod.id}`}>
         <Card key={prod.id} id="card">
+          <Link to={`libros/${prod.id}`}>
           <Card.Img variant="top" src={prod.imgURL} />
           <Card.Body>
             <Card.Title>{prod.titulo}</Card.Title>
@@ -16,8 +16,8 @@ function Item(props) {
             </Card.Text>
             <Button variant="primary">Añadir al Carrito</Button>
           </Card.Body>
-        </Card>
         </Link>
+        </Card>
         )}
     </>
   )
