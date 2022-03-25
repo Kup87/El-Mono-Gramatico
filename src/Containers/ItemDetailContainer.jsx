@@ -9,7 +9,10 @@ function ItemDetailContainer() {
     const [loading, setLoading] = useState(true)
     const { libroid } = useParams()
     const [producto, setProducto] = useState({})
-    const goBack = () => window.history.go(-1)
+    const goBack = (e) => {
+        if(e.currentTarget != e.target ) return; //e.stopPropagation & e.preventDefault no me quieren
+        window.history.go(-1)
+    }
     
     useEffect(() => {
         fxFetch
@@ -21,12 +24,14 @@ function ItemDetailContainer() {
     return (
         <>
             <div className="ModalBack" onClick={goBack}>
+                <div>
             {loading ? <Spinner animation="border" role="status" className="mx-auto"><span className="visually-hidden">Loading...</span></Spinner>
                 :
                 <div className="detailContainer">
                     <ItemDetail libro={producto}></ItemDetail>
                 </div>
             }
+            </div>
             </div>
         </>
     )

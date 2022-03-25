@@ -2,9 +2,9 @@ import {useState} from 'react'
 import add_icon from './add_icon.svg';
 import subtract_icon from './subtract_icon.svg';
 
-function ItemCount({stock, initialItemAmount}) {
+function ItemCount({ stock }) {
     
-  const [itemAmount, setItemAmount] = useState( initialItemAmount );
+  const [itemAmount, setItemAmount] = useState( 0 );
     
   const agregarItemAmount = () =>{
     if(itemAmount < stock)  {

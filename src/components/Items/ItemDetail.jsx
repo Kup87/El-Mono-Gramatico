@@ -1,8 +1,12 @@
 import { Card } from "react-bootstrap"; //export 'Card' (imported as 'Card') was not found in 'react-bootstrap/Card'
+import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail(props) {
   const {libro} = props
-  console.log(libro)
+  let hayStock;
+  if (libro.stock > 0) {
+    hayStock = "Disponible"
+  } else { hayStock = "Sin stock"}
   return (
     <>
         {<Card key={libro.id} id="card2">
@@ -14,8 +18,11 @@ function ItemDetail(props) {
               {libro.descripcion}
             </Card.Text>
             <Card.Title>$ {libro.precio}</Card.Title>
+            <Card.Title>{hayStock}</Card.Title>
           </Card.Body>
+          <ItemCount stock={libro.stock}></ItemCount>
         </Card>}
+        
     </>
   )
 }
