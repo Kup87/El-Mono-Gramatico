@@ -13,7 +13,7 @@ function ItemDetail(props) {
 
   const [addToCart, setAddToCart] = useState(false)
 
-  const onAdd = () => { //debería poder setear el valor de "itemCount" acá, pero eso corresponde acá o al ItemCount?
+  const onAdd = () => { 
     return setAddToCart(true)
   }
 

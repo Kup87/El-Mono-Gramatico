@@ -35,7 +35,8 @@
     }   
 
     .card-img, .card-img-bottom, .card-img-top {
-        width: 50%;
+        width: 100%;
+        max-width: 30vw;
     }
 
 }

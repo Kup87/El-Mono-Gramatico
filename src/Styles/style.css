@@ -144,7 +144,8 @@ body a:not([href]):not([class]), body a:not([href]):not([class]):hover {
         justify-content: space-around;
   }
   .card-img, .card-img-bottom, .card-img-top {
-    width: 50%;
+    width: 100%;
+    max-width: 30vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import { Button } from 'react-bootstrap';
 import add_icon from './add_icon.svg';
 import subtract_icon from './subtract_icon.svg';
@@ -7,18 +7,24 @@ import subtract_icon from './subtract_icon.svg';
 function ItemCount({ stock, onAdd}) {
 
   const [itemAmount, setItemAmount] = useState(0);
+  
+  console.log(contextItemAmount)
 
   const agregarItemAmount = () => {
     if (itemAmount < stock) {
       setItemAmount(itemAmount + 1)
+      
     }
   }
 
   const quitarItemAmount = () => {
     if (itemAmount > 1) {
       setItemAmount(itemAmount - 1)
+      
     }
   }
+
+  
 
   return (
     <>
