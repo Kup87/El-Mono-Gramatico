@@ -5,8 +5,8 @@ import GoToCartBtn from "../CartWidget/GoToCartBTN";
 import SeguirComprando from "../CartWidget/SeguirComprando";
 import ItemCount from "../ItemCount/ItemCount";
 
-function ItemDetail(props) {
-  const { libro } = props
+function ItemDetail({ libro }) {
+  
   let hayStock;
   if (libro.stock > 0) {
     hayStock = "Disponible"

@@ -30,7 +30,7 @@ function ItemCount({ stock, onAdd}) {
         <div>{itemAmount}</div>
         <button onClick={agregarItemAmount} className='countBTN'><img src={add_icon} alt="+" className='countSVG' /></button>
       </div>
-      <Button variant="primary" onClick={onAdd} className='countBTN countSubmit'>Añadir al Carrito</Button>
+      <Button variant="primary" onClick={() => onAdd({itemAmount})} className='countBTN countSubmit'>Añadir al Carrito</Button>
     </>
   )
 }
