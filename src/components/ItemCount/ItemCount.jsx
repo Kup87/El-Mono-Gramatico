@@ -1,8 +1,10 @@
 import {useState} from 'react'
+import { Button } from 'react-bootstrap';
 import add_icon from './add_icon.svg';
 import subtract_icon from './subtract_icon.svg';
 
-function ItemCount({ stock }) {
+
+function ItemCount({ stock, onAdd }) {
     
   const [itemAmount, setItemAmount] = useState( 0 );
     
@@ -18,10 +20,6 @@ function ItemCount({ stock }) {
     }
   }
 
-  const onAdd = () =>{
-    console.log(itemAmount)
-  } 
-
   return (
     <>
     <div className='contador_container'>
@@ -29,7 +27,8 @@ function ItemCount({ stock }) {
       <div>{itemAmount}</div>
       <button onClick={agregarItemAmount} className='countBTN'><img src={add_icon} alt="+" className='countSVG'/></button>
     </div>  
-      <button onClick={onAdd} className='countBTN countSubmit'>Agregar al Carrito!</button>
+    <Button variant="primary" onClick={onAdd} className='countBTN countSubmit'>Añadir al Carrito</Button>
+     
 
     </>
   )

@@ -14,7 +14,6 @@ function Item(props) {
             <Card.Text>
               {prod.autor}
             </Card.Text>
-            <Button variant="primary">Añadir al Carrito</Button>
           </Card.Body>
         </Link>
         </Card>
