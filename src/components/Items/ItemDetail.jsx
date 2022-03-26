@@ -30,7 +30,10 @@ function ItemDetail(props) {
           <Card.Title>$ {libro.precio}</Card.Title>
           <Card.Title>{hayStock}</Card.Title>
           { 
-            addToCart ?
+            (hayStock == "Sin stock") ?
+              <><SeguirComprando></SeguirComprando></>
+              :
+              (addToCart && (hayStock == "Disponible")) ?
               <><SeguirComprando></SeguirComprando><GoToCartBtn></GoToCartBtn></>
               :
               <ItemCount stock={libro.stock} onAdd={() => onAdd()}></ItemCount>
