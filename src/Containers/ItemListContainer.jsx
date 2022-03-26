@@ -10,7 +10,7 @@ function ItemListContainer() {
   const [loading, setLoading] = useState(true)
   const [prods, setProds] = useState([])
   const {categoria}  = useParams()
-  console.log(categoria)
+  
 
   useEffect(()=>{
     if (categoria) {

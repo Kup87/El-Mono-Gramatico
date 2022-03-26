@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Card } from "react-bootstrap"; //export 'Card' (imported as 'Card') was not found in 'react-bootstrap/Card'
-import {cartContext} from "../../context/cartContext";
+import { useCartContext } from "../../context/cartContext"
 import GoToCartBtn from "../CartWidget/GoToCartBTN";
 import SeguirComprando from "../CartWidget/SeguirComprando";
 import ItemCount from "../ItemCount/ItemCount";
@@ -14,10 +14,11 @@ function ItemDetail(props) {
 
   const [addedToCart, setAddToCart] = useState(false)
 
-  const {addToCart} = useContext( cartContext )
+  const {addToCart} = useCartContext()
 
   const onAdd = (cant) => { 
-    addToCart({...props, cantidad: cant})
+    // console.log(cant) undefined¿?
+    addToCart({...libro, cantidad: cant})
     return setAddToCart(true)
   }
   
@@ -33,7 +34,7 @@ function ItemDetail(props) {
           </Card.Text>
           <Card.Title>$ {libro.precio}</Card.Title>
           <Card.Title>{hayStock}</Card.Title>
-          { 
+          {   
             (hayStock == "Sin stock") ?
               <><SeguirComprando></SeguirComprando></>
               :

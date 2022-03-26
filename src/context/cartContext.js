@@ -1,6 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const cartContext = createContext([])
+const cartContext = createContext([])
+
+export const useCartContext = () => useContext(cartContext)
 
 function CartContextProvider({children}) {
     const[cartList, setCartList] = useState([])
@@ -9,10 +11,13 @@ function CartContextProvider({children}) {
         setCartList([...cartList, item])
     }
 
+    const vaciarCart=()=> setCartList([])
+
   return (
     <cartContext.Provider value={{ 
         cartList,
-        addToCart
+        addToCart,
+        vaciarCart
         
     }}>
 
