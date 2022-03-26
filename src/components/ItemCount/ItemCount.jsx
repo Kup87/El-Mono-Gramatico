@@ -8,8 +8,6 @@ function ItemCount({ stock, onAdd}) {
 
   const [itemAmount, setItemAmount] = useState(0);
   
-  console.log(contextItemAmount)
-
   const agregarItemAmount = () => {
     if (itemAmount < stock) {
       setItemAmount(itemAmount + 1)
