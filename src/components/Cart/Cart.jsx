@@ -20,7 +20,7 @@ function Cart() {
        
         
     </div>
-    <div>{totalCartList}</div>
+    <div>Total:  $ {totalCartList}</div>
     
     <Button onClick={vaciarCart}>Vaciar el Carrito</Button>
     </>
