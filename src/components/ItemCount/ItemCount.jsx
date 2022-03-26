@@ -4,7 +4,7 @@ import add_icon from './add_icon.svg';
 import subtract_icon from './subtract_icon.svg';
 
 
-function ItemCount({ stock, onAdd }) {
+function ItemCount({ stock, onAdd}) {
 
   const [itemAmount, setItemAmount] = useState(0);
 
